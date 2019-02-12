@@ -1,5 +1,5 @@
 {
-    "name": "irishdan/responsive-image-bundle",
+    "name": "tomcawthorn/responsive-image-bundle",
     "description": "A bundle for creating styled and responsive images for symfony projects",
     "license": "MIT",
     "homepage": "http://danbyrne.me/projects/responsive-image-bundle",
