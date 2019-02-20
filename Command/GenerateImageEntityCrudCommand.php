@@ -108,7 +108,7 @@ class GenerateImageEntityCrudCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $questionHelper = $this->getQuestionHelper();
+        $questionHelper = $this->getHelper('question');
 
         if ($input->isInteractive()) {
             $question = new ConfirmationQuestion($questionHelper->getQuestion('Do you confirm generation', 'yes', '?'), true);
@@ -154,7 +154,7 @@ class GenerateImageEntityCrudCommand extends Command
 
     protected function interact(InputInterface $input, OutputInterface $output)
     {
-        $questionHelper = $this->getQuestionHelper();
+        $questionHelper = $this->getHelper('question');
         $questionHelper->writeSection($output, 'Welcome to the Doctrine2 CRUD generator');
 
         // namespace

@@ -4,11 +4,6 @@ namespace IrishDan\ResponsiveImageBundle\Command;
 
 use IrishDan\ResponsiveImageBundle\Generator\ImageEntityGenerator;
 use IrishDan\ResponsiveImageBundle\ImageEntityNameResolver;
-use Symfony\Bundle\MakerBundle\ConsoleStyle;
-use Symfony\Bundle\MakerBundle\DependencyBuilder;
-use Symfony\Bundle\MakerBundle\Generator;
-use Symfony\Bundle\MakerBundle\InputConfiguration;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -106,7 +101,7 @@ class GenerateImageEntityCommand extends BaseCommand
      */
     protected function interact(InputInterface $input, OutputInterface $output)
     {
-        $questionHelper = $this->getQuestionHelper();
+        $questionHelper = $this->getHelper('question');
         $questionHelper->writeSection($output, 'Welcome to the Image entity generator');
 
         $message = [
@@ -210,7 +205,7 @@ class GenerateImageEntityCommand extends BaseCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $questionHelper = $this->getQuestionHelper();
+        $questionHelper = $this->getHelper('question');
 
         if ($input->isInteractive()) {
             $question = new ConfirmationQuestion(
