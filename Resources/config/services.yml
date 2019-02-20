@@ -190,7 +190,7 @@ services:
         tags:
             - { name: twig.extension }
 
-
-    router:
-        class: Symfony\Component\Routing\Router
-        public: true
+#
+#    router:
+#        class: Symfony\Component\Routing\Router
+#        public: true
